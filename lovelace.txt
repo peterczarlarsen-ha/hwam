@@ -1,3 +1,10 @@
+#
+#
+# image used was found on hwam's website, https://www.hwam.com/pub/media/catalog/product/cache/562a54665a6a45832fc92cf6097b9a76/h/w/hwam_7150c_soapstone.jpg
+#
+# image kan be replaced with your own picture, or product picture form hwam of your own oven.
+#
+
 image: 'https://link.til.billede_____.dk:8123/local/hwam.jpg'
 type: picture-elements
 elements:
