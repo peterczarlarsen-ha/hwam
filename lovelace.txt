@@ -1,0 +1,95 @@
+image: 'https://link.til.billede_____.dk:8123/local/hwam.jpg'
+type: picture-elements
+elements:
+  - type: icon
+    icon: 'mdi:fireplace'
+    title: Hwam
+    style:
+      color: black
+      top: 80%
+      left: 20px
+      '--iron-icon-fill-color': '#FFFFFF'
+      '--iron-icon-height': 40px
+      '--iron-icon-width': 40px
+  - type: state-label
+    entity: sensor.hwam_stove_temperature
+    style:
+      color: black
+      top: 80%
+      left: 50px
+      font-size: 15px
+      max-width: 50px
+  - type: icon
+    icon: 'mdi:home-thermometer-outline'
+    style:
+      color: black
+      top: 80%
+      left: 90px
+  - type: state-label
+    entity: sensor.hwam_room_temperature
+    style:
+      color: black
+      top: 80%
+      left: 120px
+      font-size: 15px
+      max-width: 50px
+  - type: icon
+    icon: 'mdi:molecule-co2'
+    style:
+      color: black
+      top: 80%
+      left: 160px
+  - type: state-label
+    entity: sensor.hwam_oxygen_level
+    style:
+      color: black
+      top: 80%
+      left: 170px
+      font-size: 15px
+      max-width: 1px
+  - type: icon
+    icon: 'mdi:valve'
+    title: Lawn completion percentage
+    style:
+      color: black
+      top: 90%
+      left: 20px
+      '--iron-icon-fill-color': '#FFFFFF'
+      '--iron-icon-height': 40px
+      '--iron-icon-width': 40px
+  - type: state-label
+    entity: sensor.hwam_valve1_position
+    style:
+      color: black
+      top: 90%
+      left: 50px
+      font-size: 15px
+      max-width: 50px
+  - type: icon
+    icon: 'mdi:valve'
+    style:
+      color: black
+      top: 90%
+      left: 90px
+  - type: state-label
+    entity: sensor.hwam_valve2_position
+    style:
+      color: black
+      top: 90%
+      left: 120px
+      font-size: 15px
+      max-width: 50px
+  - type: icon
+    icon: 'mdi:valve'
+    style:
+      color: black
+      top: 90%
+      left: 160px
+  - type: state-label
+    entity: sensor.hwam_valve3_position
+    style:
+      color: black
+      top: 90%
+      left: 170px
+      font-size: 15px
+      max-width: 1px
