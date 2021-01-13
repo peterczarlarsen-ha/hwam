@@ -1,0 +1,74 @@
+config.yaml 
+# Sensors 
+sensor:
+  - platform: rest
+    # x.x.x.x with local ip
+    resource: http://x.x.x.x/get_stove_data 
+    method: GET
+    name: HWAM
+    value_template: '{{ (value_json.stove_temperature | float / 100) | round(0) }}'
+    json_attributes:
+      - phase
+      - new_fire_wood_hours
+      - new_fire_wood_minutes
+      - burn_level
+      - operation_mode
+      - maintenance_alarms
+#      - version_major
+#      - version_minor
+#      - version_build
+#      - remote_version_major
+#      - remote_version_minor
+#      - remote_version_build
+      - stove_temperature
+      - room_temperature
+      - oxygen_level
+      - valve1_position
+      - valve2_position
+      - valve3_position
+      - algorithm
+      - doorOpen  
+  - platform: template
+    sensors:
+      hwam_phase:
+        friendly_name: 'Brændeovn faser'
+        icon_template: mdi:book-open
+        value_template: '{{ states.sensor.hwam.attributes["phase"] }}'   
+      hwam_burn_level:
+        friendly_name: 'Brændeovn level'
+        icon_template: mdi:spirit-level
+        value_template: '{{ states.sensor.hwam.attributes["burn_level"] }}'     
+      hwam_operation_mode:
+        friendly_name: 'Brændeovn mode'
+        icon_template: mdi:book-open
+        value_template: '{{ states.sensor.hwam.attributes["operation_mode"] }}'     
+      hwam_stove_temperature: 
+        friendly_name: 'Brændeovn temperatur'
+        icon_template: mdi:fireplace
+        unit_of_measurement: '°C'
+        value_template: '{{ (states.sensor.hwam.attributes["stove_temperature"] | float / 100) | round(0) }}'         
+      hwam_room_temperature: 
+        friendly_name: 'Brændeovn rum temperatur'
+        icon_template: mdi:home-thermometer-outline
+        unit_of_measurement: '°C'
+        value_template: '{{ (states.sensor.hwam.attributes["room_temperature"] | float / 100) | round(0) }}'
+      hwam_valve1_position:
+        friendly_name: 'Brændeovn ventil 1'
+        icon_template: mdi:valve
+        value_template: '{{ states.sensor.hwam.attributes["valve1_position"] }}'          
+      hwam_valve2_position:
+        friendly_name: 'Brændeovn ventil 2'
+        icon_template: mdi:valve
+        value_template: '{{ states.sensor.hwam.attributes["valve2_position"] }}'
+      hwam_valve3_position:
+        friendly_name: 'Brændeovn ventil 3'
+        icon_template: mdi:valve
+        value_template: '{{ states.sensor.hwam.attributes["valve3_position"] }}'
+      hwam_oxygen_level:
+        friendly_name: 'Brændeovn oxygen'
+        icon_template: mdi:molecule-co2
+        unit_of_measurement: '%'
+        value_template: '{{ states.sensor.hwam.attributes["oxygen_level"] }}'
+
+
+
