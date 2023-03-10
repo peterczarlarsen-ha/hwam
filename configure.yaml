@@ -2,7 +2,7 @@ config.yaml
 # Sensors 
 sensor:
   - platform: rest
-    # x.x.x.x with local ip
+    # x.x.x.x with local ip of stove
     resource: http://x.x.x.x/get_stove_data 
     method: GET
     name: HWAM
