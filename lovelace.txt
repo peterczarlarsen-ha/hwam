@@ -5,7 +5,7 @@
 # image kan be replaced with your own picture, or product picture form hwam of your own oven.
 #
 
-image: 'https://link.til.billede_____.dk:8123/local/hwam.jpg'
+image: 'https://homeassistant.local:8123/local/hwam.jpg'
 type: picture-elements
 elements:
   - type: icon
