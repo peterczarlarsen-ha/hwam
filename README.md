@@ -1,6 +1,6 @@
 # hwam
-hwam brændeovn i homeassistant
+hwam stove in homeassistant
 
-Fundet i "Dansk Home Assistant gruppe" på facebook.
+Fund it in "Dansk Home Assistant gruppe" on facebook.
 
-små tilretninger tilføjet
+A few added things, now using the hwam_stove plugin, kept for reference
